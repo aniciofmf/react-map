@@ -18,7 +18,7 @@ export const SearchBarResults = () => {
 					<p className="text-muted" style={{ fontSize: "12px" }}>
 						{location.place_name}
 					</p>
-					<button className="btn btn-outline-primary">Places</button>
+					<button className="btn btn-outline-primary">Go to Location</button>
 				</li>
 			))}
 		</ul>
