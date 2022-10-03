@@ -6,10 +6,14 @@ import { SearchBarResults } from "./SearchBarResults";
 const DEBOUNCE_TIME_MS = 500;
 
 export const SearchBar = () => {
-	const { searchLocations } = useContext(LocationsContext);
+	const { searchLocations, emptyLocations } = useContext(LocationsContext);
 	const debounceRef = useRef<NodeJS.Timeout>();
 
 	const searchChange = (event: ChangeEvent<HTMLInputElement>) => {
+		if (event.target.value.length === 0) {
+			emptyLocations();
+		}
+
 		if (debounceRef.current) {
 			clearTimeout(debounceRef.current);
 		}

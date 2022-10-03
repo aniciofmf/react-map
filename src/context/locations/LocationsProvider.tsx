@@ -46,11 +46,19 @@ export const LocationsProvider: FC<{ children: JSX.Element | JSX.Element[] }> = 
 		return resp.data.features;
 	};
 
+	const emptyLocations = () => {
+		dispatch({
+			type: "setLocations",
+			payload: [],
+		});
+	};
+
 	return (
 		<LocationsContext.Provider
 			value={{
 				...state,
 				searchLocations,
+				emptyLocations,
 			}}
 		>
 			{children}

@@ -6,4 +6,5 @@ export interface IContextLocation {
 	locations: IFeature[];
 	isLoadingLocations: boolean;
 	searchLocations: (query: string) => Promise<IFeature[]>;
+	emptyLocations: () => void;
 }
