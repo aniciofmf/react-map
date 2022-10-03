@@ -19,7 +19,8 @@ export const LocationsProvider: FC<{ children: JSX.Element | JSX.Element[] }> = 
 			type: "setUserLocation",
 			payload: [longitude, latitude],
 		});
-	});
+	}, [longitude, latitude]);
+
 	return (
 		<LocationsContext.Provider
 			value={{
