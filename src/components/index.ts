@@ -1,3 +1,4 @@
 export { BtnResetLocation } from "./resetLocation";
-export { MapView } from "./MapView";
 export { Loading } from "./Loading";
+export { MapView } from "./MapView";
+export { SearchBar } from "./SearchBar";
