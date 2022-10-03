@@ -8,7 +8,7 @@ export const SearchBarResults = () => {
 	{
 		/* I can do it better */
 	}
-	if (isLoadingLocations) return <></>;
+	if (isLoadingLocations || locations.length === 0) return <></>;
 
 	return (
 		<ul className="list-group mt-2">
