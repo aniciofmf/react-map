@@ -1,6 +1,7 @@
 import { useContext, ChangeEvent, useRef } from "react";
 
 import { LocationsContext } from "../context/locations/LocationsContext";
+import { SearchBarResults } from "./SearchBarResults";
 
 const DEBOUNCE_TIME_MS = 500;
 
@@ -21,6 +22,7 @@ export const SearchBar = () => {
 	return (
 		<div className="search-container">
 			<input type="text" className="form-control" placeholder="Search a Location..." onChange={searchChange} />
+			<SearchBarResults />
 		</div>
 	);
 };

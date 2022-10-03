@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const LIMIT = 10;
+const LIMIT = 5;
 const LANG = "en";
 
 export const searchApi = axios.create({
