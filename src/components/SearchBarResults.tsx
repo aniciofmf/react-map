@@ -5,9 +5,6 @@ import { IFeature } from "../interfaces/Map/ILocationResponse";
 export const SearchBarResults = () => {
 	const { locations, isLoadingLocations } = useContext(LocationsContext);
 
-	{
-		/* I can do it better */
-	}
 	if (isLoadingLocations || locations.length === 0) return <></>;
 
 	return (
