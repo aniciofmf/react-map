@@ -1,9 +1,10 @@
-import { MapView } from "../components";
+import { BtnResetLocation, MapView } from "../components";
 
 export const Home = () => {
 	return (
 		<div>
 			<MapView />
+			<BtnResetLocation />
 		</div>
 	);
 };

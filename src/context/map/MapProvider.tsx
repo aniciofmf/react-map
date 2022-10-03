@@ -1,5 +1,5 @@
-import { FC, useReducer, useEffect } from "react";
-import { Map } from "mapbox-gl";
+import { FC, useReducer } from "react";
+import { Map, Marker } from "mapbox-gl";
 
 import { MapContext } from "./MapContext";
 import { MapReducer } from "./MapReducer";
@@ -14,6 +14,12 @@ export const MapProvider: FC<{ children: JSX.Element | JSX.Element[] }> = ({ chi
 	const [state, dispatch] = useReducer(MapReducer, mapInitialState);
 
 	const setMap = (map: Map) => {
+		new Marker({
+			color: "#61DAFB",
+		})
+			.setLngLat(map.getCenter())
+			.addTo(map);
+
 		dispatch({
 			type: "setMap",
 			payload: map,
